@@ -1,6 +1,6 @@
 import React from "react";
-import projData from "../data/projData";
-import Project from "../components/project";
+import projData from "../data/projData.js";
+import Project from "../components/project.js";
 
 function Projects() {
   function createCard(project) {
@@ -20,3 +20,5 @@ function Projects() {
   // Runs through the projects data and creates an element for each entry
   return projData.map((proj) => createCard(proj));
 }
+
+export default Projects;

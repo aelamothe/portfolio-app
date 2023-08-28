@@ -1,6 +1,6 @@
 import React from "react";
 
-function Navbar() {
+function NavBar() {
   return (
     <nav
       class="navbar navbar-expand-lg fixed-top"
@@ -64,4 +64,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavBar;
