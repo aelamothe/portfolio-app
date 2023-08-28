@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import { HashRouter, Route, Routes } from "react-router-dom";
+import Home from "src/pages/home.js";
+import Projects from "src/pages/projects.js";
+import NavBar from "src/components/navbar.js";
 
 function App() {
+  // shared context is our set of users
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <NavBar />
+
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+      </Routes>
+    </HashRouter>
   );
 }
 
